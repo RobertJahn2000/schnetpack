@@ -204,7 +204,7 @@ class DipoleMoment(nn.Module):
             y = y + atomic_dipoles
 
         # sum over atoms
-        y = snn.scatter_add(y, idx_m, dim_size=maxm)
+        #y = snn.scatter_add(y, idx_m, dim_size=maxm)
 
         if self.predict_magnitude:
             y = torch.norm(y, dim=1, keepdim=False)
